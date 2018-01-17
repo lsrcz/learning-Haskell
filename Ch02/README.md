@@ -80,7 +80,7 @@ ghci> let waxOn = x * 5
    > let triple x = x * 3
    > ```
    ```haskell
-   > ghci let triple x = x * 3
+   ghci> let triple x = x * 3
    ```
 3. > Now, what will happen if we enter this at our GHCi prompt. Try to reason out what you think will happen first, considering what role `waxOn` is playing in this function call. Then enter it, see what does happen, and check your understanding:
    > ```haskell
