@@ -99,7 +99,8 @@
    The type of f is `[Char]`.
 ## Does it compile?
 > For each set of expressions, figure out which expression, if any, causes the compiler to squawk (n.b. we do not mean literal squawking) at you and why. Fix it if you can.
-1. > ```haskell
+1. Expression:
+   > ```haskell
    > bigNum = (^) 5 $ 10
    > wahoo = bigNum $ 10
    > ```
@@ -115,20 +116,23 @@
    bigNum = (^) 5 $ 10
    wahoo = bigNum
    ```
-2. > ```haskell
+2. Expression:
+   > ```haskell
    > x = print
    > y = print "woohoo!"
    > z = x "hello world"
    > ```
    It compiles.
-3. > ```haskell
+3. Expression:
+   > ```haskell
    > a = (+)
    > b=5
    > c = b 10
    > d = c 200
    > ```
    The code won't compile, can't apply `b` to `10`.
-4. > ```haskell
+4. Expression:
+   > ```haskell
    > a = 12 + b
    > b = 10000 * c
    > ```
@@ -157,7 +161,8 @@
    Answer: Fully polymorphic, Fully polymorphic, concrete.
 ## Write a type signature
 > For the following expressions, please add a type signature.
-1. > ```haskell
+1. Expression:
+   > ```haskell
    > functionH ::
    > functionH (x:_) = x
    > ```
@@ -165,7 +170,8 @@
    functionH :: [a] -> a
    functionH (x:_) = x
    ```
-2. > ```haskell
+2. Expression:
+   > ```haskell
    > functionC ::
    > functionC x y = if (x > y) then True else False
    > ```
@@ -173,7 +179,8 @@
    functionC :: Ord a => a -> a -> Bool
    functionC x y = if (x > y) then True else False
    ```
-3. > ```haskell
+3. Expression:
+   > ```haskell
    > functionS ::
    > functionS (x, y) = y
    > ```
@@ -254,7 +261,8 @@
    ```
 ## Fix it.
 > Be sure to check carefully for things like capitalization, parentheses, and indentation.
-1. > ```haskell
+1. Expression:
+   > ```haskell
    > module sing where
    > 
    > fstString :: [Char] ++ [Char]
@@ -271,7 +279,8 @@
 2. > Now that it’s fixed, make a minor change and make it sing the other song. If you’re lucky, you’ll end up with both songs stuck in your head!
 
    An interesting question. :)
-3. > ```haskell
+3. Expression:
+   > ```haskell
    > -- arith3broken.hs
    > module Arith3Broken where
    >
@@ -286,7 +295,8 @@
    [Here](./fix-3.hs) is the code.
 ## Type-Kwon-Do
 > You’ll use only the declarations provided and what the Prelude provides by default unless otherwise specified. Your goal is to make the ???’d declaration pass the typechecker by modifying it alone.
-1. > ```haskell
+1. Expression:
+   > ```haskell
    > f :: Int -> String 
    > f = undefined
    > 
@@ -297,7 +307,8 @@
    > h = ???
    > ```
    [Here](./tkd-1.hs) is the code.
-2. > ```haskell
+2. Expression:
+   > ```haskell
    > data A
    > data B
    > data C
@@ -312,7 +323,8 @@
    > e = ???
    > ```
    [Here](./tkd-2.hs) is the code.
-3. > ```haskell
+3. Expression:
+   > ```haskell
    > data X
    > data Y
    > data Z
@@ -327,7 +339,8 @@
    > xform = ???
    > ```
    [Here](./tkd-3.hs) is the code.
-4. > ```haskell
+4. Expression:
+   > ```haskell
    > munge :: (x -> y) -> (y -> (w, z)) -> x -> w
    > munge = ???
    > ```
