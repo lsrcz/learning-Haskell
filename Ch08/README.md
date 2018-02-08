@@ -105,7 +105,7 @@
 [Here](./dividedBy.hs) is the code.
 
 ## McCarthy 91 function
-> The McCarthy 91 function yields $x - 10$ when 𝑥 > 100 and 91 otherwise. The function is recursive.
+> The McCarthy 91 function yields x - 10 when x > 100 and 91 otherwise. The function is recursive.
 > <a href="https://www.codecogs.com/eqnedit.php?latex=MC(n)=&space;\left\{\begin{matrix}&space;n-10&\textrm{if}~n&space;>&space;100\\&space;MC(MC(n&plus;11))&\textrm{if}~n\leq100\\&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?MC(n)=&space;\left\{\begin{matrix}&space;n-10&\textrm{if}~n&space;>&space;100\\&space;MC(MC(n&plus;11))&\textrm{if}~n\leq100\\&space;\end{matrix}\right." title="MC(n)= \left\{\begin{matrix} n-10&\textrm{if}~n > 100\\ MC(MC(n+11))&\textrm{if}~n\leq100\\ \end{matrix}\right." /></a>
 > ```haskell
 > mc91 = undefined
