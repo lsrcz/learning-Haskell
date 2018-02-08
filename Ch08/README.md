@@ -106,3 +106,36 @@
 
 ## McCarthy 91 function
 > The McCarthy 91 function yields $x - 10$ when 𝑥 > 100 and 91 otherwise. The function is recursive.
+> <a href="https://www.codecogs.com/eqnedit.php?latex=MC(n)=&space;\left\{\begin{matrix}&space;n-10&\textrm{if}~n&space;>&space;100\\&space;MC(MC(n&plus;11))&\textrm{if}~n\leq100\\&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?MC(n)=&space;\left\{\begin{matrix}&space;n-10&\textrm{if}~n&space;>&space;100\\&space;MC(MC(n&plus;11))&\textrm{if}~n\leq100\\&space;\end{matrix}\right." title="MC(n)= \left\{\begin{matrix} n-10&\textrm{if}~n > 100\\ MC(MC(n+11))&\textrm{if}~n\leq100\\ \end{matrix}\right." /></a>
+> ```haskell
+> mc91 = undefined
+> ```
+> ```haskell
+> Prelude> map mc91 [95..110]
+> [91,91,91,91,91,91,91,92,93,94,95,96,97,98,99,100]
+> ```
+[Here](./mc91.hs) is the code.
+
+## Numbers into words
+> ```haskell
+> module WordNumber where
+> 
+> import Data.List (intersperse)
+> 
+> digitToWord :: Int -> String 
+> digitToWord n = undefined
+> 
+> digits :: Int -> [Int] 
+> digits n = undefined
+> 
+> wordNumber :: Int -> String 
+> wordNumber n = undefined
+> ```
+> Fill in the implementations of the functions above so that `wordNumber` returns the English word version of the Int value.
+> Here is what your output should look in the REPL when it’s working:
+> ```haskell
+> Prelude> wordNumber 12324546
+> "one-two-three-two-four-five-four-six"
+> Prelude>
+> ```
+[Here](./wordNumber.hs) is the code.
