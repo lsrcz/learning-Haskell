@@ -5,7 +5,7 @@
 >
 > If you still have your answer, great! If not, rewrite it and then write Hspec tests for it.
 
-[Here](./sumfromone/) is the code.
+[Here](./mult/) is the code.
 
 ## Chapter Exercises
 ### Validating numbers into words
