@@ -151,3 +151,13 @@
 >      deriving (Eq, Show)
 >    ```
 [Here](./gen.hs) is the code.
+
+### Hangman testing
+> Next, you should go back to the Hangman project from the previous chapter and write tests. The kinds of tests you can write at this point will be limited due to the interactive nature of the game. However, you can test the functions.
+
+[Here](./hangman/) is the code.
+
+### Validating ciphers
+> As a final exercise, create QuickCheck properties that verify your Caesar and Vigenère ciphers return the same data after encoding and decoding a string.
+
+[Here](./cipher.hs) is the code.
