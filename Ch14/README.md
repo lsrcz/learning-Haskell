@@ -109,3 +109,45 @@
     > f x = (read (show x)) == x
     > ```
     [Here](./quickcheck/11.hs) is the code.
+
+### Idempotence
+> Idempotence refers to a property of some functions in which the result value does not change beyond the initial application. If you apply the function once, it returns a result, and applying the same function to that value won’t ever change it. You might think of a list that you sort: once you sort it, the sorted list will remain the same a er applying the same sorting function to it. It’s already sorted, so new applications of the sort function won’t change it.
+>
+> Use QuickCheck and the following helper functions to demonstrate idempotence for the following:
+> ```haskell
+> twice f = f . f
+> fourTimes = twice . twice
+> ```
+> 1.
+> ```haskell
+> f x =
+>   capitalizeWord x
+>   == twice capitalizeWord x
+>   == fourTimes capitalizeWord x
+> ```
+> 2. 
+> ```haskell
+> f x =
+>   sort x
+>   == twice sort x
+>   == fourTimes sort x
+> ```
+[Here](./idempotence.hs) is the code.
+
+### Make a Gen random generator for the datatype
+> We demonstrated in the chapter how to make `Gen` generators for different datatypes. We are so certain you enjoyed that, we are going to ask you to do it for some new datatypes:
+> 1. Equal probabilities for each.
+>    ```haskell
+>    data Fool =
+>        Fulse
+>      | Frue
+>      deriving (Eq, Show)
+>    ```
+> 2. 2/3s chance of Fulse, 1/3 chance of Frue
+>    ```haskell
+>    data Fool =
+>        Fulse
+>      | Frue
+>      deriving (Eq, Show)
+>    ```
+[Here](./gen.hs) is the code.
